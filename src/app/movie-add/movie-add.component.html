@@ -1,0 +1,31 @@
+<div class="movies">
+  <div class="movies-header">
+
+    <div class="movies-header-button">
+      <button mat-button (click)="goBack();">
+        <fa name="angle-left"></fa>
+        Listeye Dön
+      </button>
+    </div>
+
+  </div>
+
+  <div class="movie-add">
+    <mat-radio-group>
+      <mat-radio-button #types value="movie" checked="true">Flim</mat-radio-button>
+      <mat-radio-button #types value="tvSeries">Dizi</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field>
+      <input matInput #name maxlength="10" placeholder="Flim Adı">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput #rank type="number" placeholder="Puanı">
+    </mat-form-field>
+
+    <button mat-button (click)="addMovie(name.value,rank.value,types.value);">
+      Kaydet
+    </button>
+  </div>
+</div>

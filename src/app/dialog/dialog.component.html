@@ -1,0 +1,22 @@
+<div class="dialog-wrap">
+
+  <div mat-dialog-content>
+    <div class="dialog-icon">
+      <fa name={{data.iconName}}></fa>
+    </div>
+    <div class="dialog-message">
+      {{data.movieName}}
+      <br>
+      {{data.message}}
+    </div>
+  </div>
+  <div mat-dialog-actions >
+    <div class="button-{{data.type === 'confirm' ? 'show' : 'hide'}}">
+      <button mat-button (click)="onClose()">İptal</button>
+      <button mat-button cdkFocusInitial (click)="onOk()">Evet</button>
+    </div>
+    <div class="button-{{data.type === 'info' ? 'show' : 'hide'}}">
+      <button mat-button cdkFocusInitial (click)="onOk()">Tamam</button>
+    </div>
+  </div>
+</div>

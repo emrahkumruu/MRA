@@ -1,0 +1,72 @@
+<div class="movies">
+  <div class="movies-header">
+
+    <div class="movies-header-button">
+      <button mat-button [matMenuTriggerFor]="types">
+        Türler
+        <fa name="angle-down"></fa>
+      </button>
+      <mat-menu #types="matMenu">
+        <button mat-menu-item (click)="filterList(filterMovie,'type')">
+          <mat-checkbox labelPosition="before" #filterMovie name="movie">Flimler</mat-checkbox>
+        </button>
+        <button mat-menu-item (click)="filterList(filterTvSeries,'type' )">
+          <mat-checkbox labelPosition="before" #filterTvSeries name="tvSeries">Diziler</mat-checkbox>
+        </button>
+      </mat-menu>
+
+    </div>
+    <div class="movies-header-button">
+      <button mat-button [matMenuTriggerFor]="sort">
+        Sırala
+        <fa name="angle-down"></fa>
+      </button>
+      <mat-menu #sort="matMenu">
+        <button mat-menu-item (click)="sortBy('asc','rank')">
+          Puana Göre (Azalan)
+        </button>
+        <button mat-menu-item (click)="sortBy('desc', 'rank')">
+          Puana Göre (Artan)
+        </button>
+      </mat-menu>
+
+    </div>
+    <div class="movies-header-button button-end">
+
+      <button mat-button (click)="redirectAdd();">
+        <fa name="plus"></fa>
+        Yeni Kayıt
+      </button>
+    </div>
+
+  </div>
+  <div class="movies-list">
+    <mat-list>
+      <mat-list-item *ngFor="let Movie of Movies | filterPipe: this.filter | sort: this.sortArg">
+        <div class="movie-list-item">
+          <div class="movie-list-item-box">
+            <div class="movie-name">
+              {{Movie.name}}
+              <div class="movie-delete" (click)="deleteMovie(Movie);">
+                <fa name="trash-o" size="2x"></fa>
+              </div>
+            </div>
+          </div>
+          <div class="movie-list-item-box">
+            <div class="movie-rank">
+              <fa name="star" size="lg"></fa>
+              {{Movie.rank}}
+            </div>
+          </div>
+          <div class="movie-list-item-box">
+            <div class="movie-rates">
+              <span>Puan Ver</span>
+              <fa name="caret-up" size="2x" class="movie-rates-button" (click)="rateMovie(Movie, 'up')"></fa>
+              <fa name="caret-down" size="2x" class="movie-rates-button" (click)="rateMovie(Movie, 'down')"></fa>
+            </div>
+          </div>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "type": "movie",
+    "name": "test",
+    "rank": 2,
+    "realseDate": 1992
+  },
+  {
+    "id": 2,
+    "type": "tvSeries",
+    "name": "test",
+    "rank": 1,
+    "realseDate": 1992
+  },
+  {
+    "id": 3,
+    "type": "movie",
+    "name": "Kara Şovalye",
+    "rank": 3,
+    "realseDate": 1992
+  },
+  {
+    "id": 4,
+    "type": "tvSeries",
+    "name": "test",
+    "rank": 6,
+    "realseDate": 1992
+  },
+  {
+    "id": 5,
+    "type": "tvSeries",
+    "name": "test",
+    "rank": 8,
+    "realseDate": 1992
+  },
+  {
+    "id": 6,
+    "type": "movie",
+    "name": "test",
+    "rank": 9,
+    "realseDate": 1992
+  }
+]

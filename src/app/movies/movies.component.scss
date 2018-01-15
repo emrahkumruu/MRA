@@ -1,0 +1,96 @@
+/**
+* Author : Emrah Kumru
+*/
+
+.movie {
+
+  &s {
+
+    &-list {
+      display: flex;
+
+      .mat-list {
+        width: 100%;
+        margin: 0 20px;
+        padding: 0;
+
+        &-item {
+          background: #ECEFF1;
+          margin-bottom: 10px;
+          height: auto;
+
+        }
+      }
+    }
+  }
+
+  &-list {
+
+    &-item {
+      display: flex;
+      width: 100%;
+      margin: 0 -16px;
+      padding: 20px;
+      color: #263238;
+
+      &-box {
+        flex: 1;
+      }
+    }
+  }
+
+  &-name {
+    display: inline-block;
+    position: relative;
+    font-weight: 400;
+
+    &:hover {
+
+      & .movie-delete {
+        display: block;
+      }
+    }
+  }
+
+  &-delete {
+    display: none;
+    position: absolute;
+    width: 40px;
+    right: -40px;
+    top: -5px;
+    text-align: center;
+    cursor: pointer;
+
+  }
+
+  &-rank {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  &-rates {
+    position: relative;
+
+    span {
+
+      position: absolute;
+      top: -15px;
+      right: 0;
+      font-size: 12px;
+      white-space: nowrap;
+
+    }
+
+    &-button {
+      position: absolute;
+      right: 10px;
+      font-size: 20px;
+      top: -13px;
+      cursor: pointer;
+
+      &:last-child {
+        top: 5px;
+      }
+    }
+  }
+}
