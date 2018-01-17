@@ -1,4 +1,4 @@
-# MRA
+# Movies Rating App with Angular 4.0
 
 install dependencies
 ```javascript
